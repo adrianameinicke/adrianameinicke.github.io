@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Tutorial programação C</title>
+</head>
+<body style="font-size: 150%">
+
+<body bgcolor="#b0c4de">
+
+<div style="background-color: gray; text-align: center; padding: 10px">
+
+<h1 style="text-align:center; font-size: 200%; color:black"><i>Tutorial de Iniciação a Programação na Linguagem C</i></h1>
+
+</div>
+
+<div style="background-color: #b0c4de; text-align: justify; padding: 10px">
+
+<h1 style="text-align: center;">INTRODUÇÃO</h1>
+
+<h2>ALGORITMOS</h2>
+
+<p>Um algoritmo pode ser definido como uma sequência de passos que visam atingir um objetivo bem definido.<br>
+	<br>
+Uma vez concebida uma solução algoritmica para um problema, esta pode ser traduzida para qualquer linguagem de programação e ser agregada das funcionalidades disponíveis nos diversos ambientes, chamado <span style="color: red">processo de codificação</span>.<br>
+<br>
+Nem sempre todas as ações previstas devem ser executadas. Tal circunstância sugere que um determinado conjunto de ações pode ser evitado, selecionando conforme o resultado de uma determinada condição.<br>
+<br>
+Constroe-se assim uma <span style="color: red">estrutura seletiva</span> através de um <span style="color: red">teste condicional</span> que permita ou não que o fluxo de execução passe por um determinado conjunto de ações.<br>
+<br>
+Quando nos deparamos com a inviabilidade da estrutura de seleção para a verificação do êxito da ação, precisamos repetir um mesmo trecho do algomitmo enquanto a condição não esteja satisfeita, construindo uma <span style="color: red">estrutura de repetição</span>.
+<br>
+</p>
+<h2>TIPOS DE DADOS</h2>
+
+<h3 style="color: darkblue">TIPOS PRIMITIVOS:</h3>
+
+<p>Os dados manipulados pelos algoritimos podem ser dos seguintes tipos:<br>
+<br>
+<b>Tipo Inteiro:</b> toda e qualquer informação numérica que pertença ao conjunto de números inteiros relativos (negativa, nula ou positiva).
+<br>
+<br>
+Sintaxe: <code>
+	<b>int</b> ID1, ID2;
+</code>
+<br>
+<br>
+<b>Tipo Real:</b> toda e qualquer informação numérica que pertença ao conjunto dos números reais (negativa, nula ou positiva).
+<br>
+<br>
+Sintaxe: <code>
+	<b>float</b> ID1, ID2;
+</code>
+<br>
+<br>
+<b>Tipo Caracter:</b> toda e qualquer informação composta por um conjunto de caracteres alfanuméricos: numéricos (0,...,9), alfabéticos (a,...z, A,...,Z) e especiais (#, ?, !, @,...).
+<br>
+<br>
+Sintaxe: <code>
+	<b>char</b> ID1, ID2;
+</code>
+<br>
+<br>
+<b>Tipo Lógico:</b> toda e qualquer situação que possa assumir duas situações (biestável): V (verdade) e F (falsidade).
+</p>
+
+<h3 style="color: darkblue">CONSTANTES:</h3>
+<p>É um dado constante que não sofre nenhuma variação ao decorrer do tempo.<br>
+	Ex: Pi
+</p>
+
+<h3 style="color: darkblue">VARIÁVEL:</h3>
+<p>Um dado é classificado como variável quando tem a possibilidade de ser alterado em algum instante do decorrer do tempo.<br>
+	Ex: cotação do dólar
+</p>
+<h3 style="color: darkblue">IDENTIFICADORES:</h3>
+<p> Para guardar os dados, precisamos de <em>identificadores</em>, que servem de rótulo para dados <em>variáveis</em> ou <em>constantes</em>, e que para usá-los é necessária a <b><em>declaração</em></b>, na qual associamos o identificador a um dos tipos primitivos válidos.
+</p>
+<h3 style="color: darkblue">EXPRESSÕES ARITMÉTICAS:</h3>
+<p>Aquelas cujos operadores são aritméticos e cujos os operandos são constantes ou variáveis do tipo numérico (inteiro ou real).<br><br>
+	Os operadores mais utilizados são: + (soma), - (subtração), * (multiplicação), / (divisão) e % (módulo).
+</p>
+<h3 style="color: darkblue">EXPRESSÕES LÓGICAS:</h3>
+<p>Aquelas cujos operadores são lógicos ou relacionais: 
+	<br><br>
+	<b>Operações relacionais:</b> realizam comparações entre dois valores de mesmo tipo primitivo.<br><br>
+	Operadores: == (igualdade), != (diferente de), > (menor que), < (maior que), <= (menor ou igual que), >= (maior ou igual que).
+<br><br>
+<b>Operações lógicos:</b> são três conectivos básicos pra formação de novas proposições lógicas compostas a partir de outras proposições lógicas simples.<br><br>
+	Operadores: && (E lógico), || (OU lógico), ! (Negação lógica).
+</p>
+	<br>
+<h2>COMANDO DE ATRIBUIÇÃO</h2>
+<p> Permite fornecer um valor a uma variável, em que o tipo de dado deve ser compatível com o tipo de variável.
+	<br>
+<br>
+Sintaxe: <code>
+	<b>variável = expressão;</b>
+</code>
+<br>
+<br>
+</p>
+<h2>COMENTÁRIOS</h2>
+<p> Os comentários não se destinam a ser interpretados pelo compilador ou por qualquer componente do processo de desenvolvimento. São simplesmente ignorados pelo compilador, e o programa executável não terá qualquer sinal deles.<br><br>
+Um comentário em C ´qualquer conjunto de caracteres compreendido entre os sinais de /* e */.
+</p>
+
+<pre><code>
+	/* AUTOR: LUIZ LIMA*/
+</code></pre>
+
+<pre><code>
+	/*************************
+	* Programa 1             *
+	* Autor: Luiz Lima       *
+	* Data: 05/09/2018       *
+	*************************/
+</code></pre>
+
+<br>
+<h2>COMANDO DE ENTRADA E SAÍDA</h2>
+
+<p><b>Entrada de dados:</b> Para que o algoritmo possa receber os dados de que necessita, precisamos adotar um comando de <em>entrada de dados</em> denominado <span style="color: red">leia</span>, cuja finalidade é atribuir o dado a ser fornecido à variável identificada. <br>
+	<br>
+	O comando "leia" é representado pela função <i>scanf</i>.
+	<br>
+	<br>
+
+<p> <b>Saída de dados:</b> Para que o algoritmo possa mostrar os dados que calculou, como resposta ao problema que resolveu, adotamos um comando de <em>saída de dados</em> denominado <span style="color: red">escreva</span>, cuja finalidade é exibir o conteúdo da variável identificada. <br>
+	<br>
+	O comando "escreva" é representado pela função <i>printf</i>.
+	<br>
+	<br>
+</p>
+<h2>BLOCOS</h2>
+<ul>
+	<li>Conjunto de ações, com uma função definida;</li>
+	<li>Serve também para definir os limites nos quais as variáveis declaradas em seu inteior são conhecidas;</li>
+	<li>Delimitadores: "Início" e "Fim".</li>
+</ul> 
+<br>
+
+<h1 style="text-align: center;">ESTRUTURAS DE CONTROLE</h1>
+
+<p> O algoritimo deve ser regido por um <b>fluxo de execução</b>.<br>
+	<br>
+	Através das estruturas básicas de controle do fluxo de execução - sequenciação, seleção, repetição - e da combinação delas, poderemos criar algoritmos para solucionar nossos problemas.<br>
+	<br>
+</p>
+Ordem da estrutura:<br>
+	<ol>
+		<li>Início (configurada pela utilização de abertura de chaves);</li>
+		<li>Declaração das variáveis;</li>
+		<li>Instruções;</li>
+		<li>Fim (configurado pela utilização de fechamento de chaves).</li>
+	</ol>
+	<br>
+
+
+<b>Notas</b>:
+
+<ul>
+	<li>Para termos acesso a essas e outras funções de entrada/saída devemos incluir nos programas o arquivo stdio.h;</li>
+	<li>Em C, um programa começa com a função <i>main();</i></li>
+	<li>A declaração da variável tem que ser sempre realizada antes da sua utilização e antes de qualquer instrução;</li>
+	<li>Uma variável pode ser automaticamente iniciada quando se faz a sua declaração;</li>
+	<li>Em C é possível atribuir o mesmo valor a várias variáveis;</li>
+	<li>O código a executar é colocado entre {};</li>
+	<li>Um bloco é formado por qualquer conjunto de instruções entre {};</li>
+	<li>Cada instrução deve ser seguida por um ponto e vírgula(;);</li>
+	<li>As <i>strings</i> em C são delimitadas pelo caractere aspas ";</li>
+	<li>O formato de escrita de um inteiro na função <i>printf</i> é %i;</li>
+	<li>O formato de escrita de um número real na função <i>printf</i> é %f;</li>
+	<li>O formato de escrita de um caracter na função <i>printf</i> é %c;</li>
+	<li>Para ler uma variável do tipo int, float ou char utilizando a função <i>scanf</i> é preciso preceder cada variável de um &;</li>
+</ul>
+	
+		<h2>ESTRUTURA SEQUENCIAL</h2>
+
+	<ul>
+	<li>O conjunto de ações primitivas será executado em uma sequência linear <b>de cima para baixo</b> e da <b>esquerda para a direita</b>, ou seja, da mesma forma que foram escritas.</li>
+	<li>As ações serão seguidas por um ponto e vírgula (;).</li>
+</ul> 
+
+Exemplo utilizando a função <i>printf</i> e <i>scanf</i>:
+
+<pre><code>
+	#include <<font color="#b0c4de">.</font>studio.h<font color="#b0c4de">.</font>>
+	
+	main()
+	{
+		int n1, n2;
+
+		printf ("Introduza dois números:");
+		scanf ("%i%i", &n1, &n2);
+		printf ("O resultado de %i + %i = %i\n, n1, n2, n1+n2");		
+	}
+	<kbd>F9</kbd>
+
+	<samp>Cique em qualquer tecla para continuar a programação.</samp>
+</code></pre>
+
+Nesse exemplo, o programa solicitou dois números através da função <i>printf</i> e os leu através da função <i>scanf</i>. Em seguida escreveu na tela o resultado da soma dos números através da função <i>printf</i>.
+
+	<h2>ESTRUTURAS DE SELEÇÃO</h2>
+
+	<ul>
+	<li>Permitem a escolha de um grupo de ações (bloco) a ser executado quando determinadas <i>condições</i>, representadas por expressões lógicas relacionais, são ou não satisfeitas.</li>
+</ul> 
+
+<h3 style="color: darkblue">SELEÇÃO SIMPLES:</h3>
+
+<ul>
+	<li>Quando é preciso testar uma certa condição antes de executar uma ação;</li>
+	<li>Realizada através das função <i>if</i>.</li>
+</ul>
+
+Exemplo das funçãos:
+</p>
+<pre><code>
+	#include <<font color="#b0c4de">.</font>studio.h<font color="#b0c4de">.</font>>
+	
+	main()
+	{
+		float salario;
+
+		printf ("Qual o salario:");
+		scanf ("%f", &salario);
+
+		if (salario < 100000)
+		{
+			salario = salario + 1000;
+		
+			printf ("Salario final: %.2\n", salario);	
+
+	}
+	<kbd>F9</kbd>
+
+	<samp>Cique em qualquer tecla para continuar a programação.</samp>
+</code></pre>
+
+Nesse exemplo, é implementado um programa que adiciona $1.000,00 ao salário de um indivíduo, caso este seja inferior a $100.000,00.
+<br>
+<br>
+<b>Notas</b>:
+
+<ul>
+	<li>Para que a impressão das informações fique mais organizada e de fácil leitura, usamos o símbolo <i>\n</i> para pular uma linha;</li>
+	<li>A fim de evitar que o formato de escrita <em>float</em> apresente um grande número de casas decimais, indicamos que depois do ponto vêm apenas dois dígitos <b>(.2)</b>.</li>
+
+<h3 style="color: darkblue">SELEÇÃO COMPOSTA:</h3>
+
+<ul>
+	<li>Quando tivermos situações em que duas alternativas dependem de uma mesma condição, uma da condição pode ser verdadeira (V) e a outra condição ser falsa (F);</li>
+	<li>Realizada através das funções <i>if</i> e <i>else</i>.</li>.
+</ul>
+
+Exemplo das funçãos:
+
+<pre><code>
+	#include <<font color="#b0c4de">.</font>stdio.h<font color="#b0c4de">.</font>>
+	
+	main()
+	{
+		int x;
+
+		printf ("Introduza um número:");
+		scanf ("%i", &x);
+
+		if (x>=0)
+		{
+			printf ("Número positivo\n");	
+		}
+		else
+		{
+			printf ("Número negativo\n");
+		}
+
+	}
+	<kbd>F9</kbd>
+
+	<samp>Cique em qualquer tecla para continuar a programação.</samp>
+</code></pre>
+
+</p>
+Nesse exemplo, é solicitado e lido um inteiro. Como se pretende indicar se o número é positivo ou negativo, testamos se o número <i>x</i> é maior ou igual a zero utilizando o operador relacional <b>">=".</b>
+<br>
+<br>
+
+<h3 style="color: darkblue">SELEÇÃO ENCADEADA:</h3>
+
+
+<ul>
+	<li>Quando, devido à necessidade de processamento, agrupamos várias seleções, formaremos uma seleção encadeada;</li>
+	<li>Normalmente tal formação ocorre quando uma determinada ação ou bloco deve ser execuado se um grande conjunto de possibilidades ou combinações de situações for satisfeito;</li>
+	<li>Realizada através das funções <i>if</i> e <i>else</i>.</li>.
+</ul>
+
+Exemplo das funçãos:
+
+<pre><code>
+	#include <<font color="#b0c4de">.</font>stdio.h<font color="#b0c4de">.</font>>
+	
+	main()
+	{
+		float salario;
+
+		printf ("Qual o salario:");
+		scanf ("%f", &salario);
+
+		if (salario <=0)
+		{
+			printf ("Salario invalido\n");
+		}
+		Else
+		{
+			if (salario > 1000)
+			{
+				printf ("Imposto = %.2f\n, salario*0.1");
+
+			}
+			else
+			{
+				printf ("Imposto= %.2f\n, salario*0.05");
+			}
+		}
+	}
+	<kbd>F9</kbd>
+
+	<samp>Cique em qualquer tecla para continuar a programação.</samp>
+</code></pre>
+
+</p>
+Nesse exemplo, é solicitado e lido um valor de salário. Se o salário digitado fosse negativo, o programa deveria dar uma mensagem de erro. Caso contrário, deveria calcular o imposto de 10% para salários maiores de $1.000,00 e 5% para menores ou iguais ao $1.000,00.
+<br>
+<br>
+
+<h3 style="color: darkblue">SWITCH:</h3>
+
+
+
+<ul>
+	<li>A fim de eliminar conjuntos extensos de instruções <i>if-else</i> encadeadas, C coloca à disposição a instrução <b>switch</b>;</li>
+	<li>Ao contrário do <i>if</i>, que permite definir bandas de valores (x>=10 && x<=20), o <b>switch</b> só admite valores predefinidos do tipo <i>char</i>, <i>int</i> e <i>long</i>;</li>
+	<li>Depois de a instrução <i>swith</i> verificar qual o <i>case</i> correspondente à expressão avaliada, inicia a execução na instrução associada a esse <i>case</i>, executando em seguida todas as instruções seguites em cascata (inclusive as que pertençam a outros <i>cases</i>) até terminar o <i>switch</i> ou até ser encontrada a instrução <b>break</b>;</li>
+	<li>A instrução <b>break</b> permite parar a execução de um conjunto de instruções dentro de um <i>switch</i>, continuando o programa na instrução seguinte ao <i>switch</i>.</li>.
+</ul>
+
+Exemplo das funçãos:
+
+<pre><code>
+	#include <<font color="#b0c4de">.</font>stdio.h<font color="#b0c4de">.</font>>
+	
+	main()
+	{
+		char Est_civil;
+
+		printf ("Qual o estado civil:");
+		scanf (" %c", &Est_civil);
+
+		switch (Est_civil)
+		{
+			
+			case 'c':
+			case 'C': printf ("Casado\n"); break;
+			case 's':
+			case 'S': printf ("Soleiro\n"); break;
+			case 'd': 
+			case 'D': printf ("Divorciado\n"); break;
+			case 'v':
+			case 'V': printf ("Viuvo\n"); break;
+			defaul: printf ("Estado Civl Incorreto\n");
+
+		}
+	}
+	<kbd>F9</kbd>
+
+	<samp>Cique em qualquer tecla para continuar a programação.</samp>
+</code></pre>
+
+</p>
+Nesse exemplo, o programa indica o estado civil correspondente a um caractere, sendo capaz de identificar letras minúsculas ou maiúsculas.
+<br>
+<br>
+<h2 style="text-align: center; color: red">BOM ESTUDOS!!</h2>
+</body>
+</html>

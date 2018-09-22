@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+<title>TOKI de Carinho_Homepage</title>
+</head>
+
+<body bgcolor="white">
+
+<div style="background-color: #b0c4de; text-align: center; padding: 10px">
+
+<h1 style="text-align:center; font-size: 200%; color:black"><img src="imgs/desenho_cao_gato.png" alt="logo TOKI" width="5%"; border="5"><i>TOKI de Carinho&#174 Pet Hotel e Creche</i></h1>
+
+</div>
+
+<div style="background-color: #000000; color: white;  text-align: center; padding: 10px">
+
+<h1><i>Nossos serviços:</i></h1>
+
+</div>
+
+<div style="background-color:white; text-align: center; font-size: 25px; color: black; padding: 20px">
+
+<table style="background-color: white" border="2">
+<tr>
+	<td><b><span style="color: red; font-size: 25px;">Hotel</span><br><img src="imgs/cao_gato.jpg" width="60%"><br>Cães e Gatos</b></td>
+	<td><b><span style="color: red; font-size: 25px;">Creche</span><br><img src="imgs/cao_brincando.jpg" width="50%"><br>Cães</b></td>
+	<td><b><span style="color: red; font-size: 25px;">Banho</span><br><img src="imgs/banho.jpg" width="60%"><br>Cães e Gatos</b></td>
+	<td><b><span style="color: red; font-size: 25px;">Estética</span><br><img src="imgs/estetica.png" width="50%"><br>Cães e Gatos</b></td>
+	<td><b><span style="color: red; font-size: 25px;">Natação</span><br><img src="imgs/natacao.jpg" width="60%"><br>Cães</b></td>
+	<td><b><span style="color: red; font-size: 25px;">Funcionamento</span><br><img src="imgs/24h.jpg" width="50%"><br>Hotel</b></td>
+</tr>
+</table>
+
+<p style="text-align: right; font-size: 70%">Login: <input type="text" name="login">
+	Senha:  <input type="password" name="psw">
+	<br></p>
+
+<table>
+	<tr>
+
+<!-- Essa próxima célula deve ser tirada.-->
+		<td><font color="white"> XXXXXXXXX</font></td>
+<!--Ver com o professor como fazer tabulação na primeira coluna-->
+
+		<td width="50%">
+<h3 style="text-align:left; font-size:5; color:darkblue">Hotel</h3>
+
+<ul style="text-align: left" type="circle">
+<li><b><a target="self" href="toki_de_carinho_hotel_creche_caes_nao_sociaveis.html">Cães sociáveis</a></b></li>
+<li><b><a target="self" href="toki_de_carinho_hotel_creche_caes_sociaveis.html">Cães não-sociáveis</a></b></li>
+<li><b><a target="self" href="toki_de_carinho_hotel_gatos.html">Gatos</a></b></li>
+</ul>
+
+<h3 style="text-align:left; font-size:5; color:darkblue">Creche</h3>
+
+<ul style="text-align: left" type="circle">
+<li><b><a target="self" href="toki_de_carinho_hotel_creche_caes_sociaveis.html">Cães sociáveis</a></b></li>
+<li><b><a target="self" href="toki_de_carinho_hotel_creche_caes_nao_sociaveis.html">Cães não-sociáveis</a></b></li>
+</ul>
+<br>
+
+	</td>
+
+	<td>
+
+<h3 style="text-align:left; font-size:5; color:darkblue">Natação</h3>
+
+<p style="text-align:left; font-size:5"><a target="self" href="toki_de_carinho_natacao.html">
+	<img src="imgs/cao_nadando.jpg" width="30%"></a><br>Plano individual ou por pacote.</p>
+
+<h3 style="text-align:left; font-size:5; color:darkblue">Pet Spa</h3>
+
+<p style="text-align:left; font-size:5"><a target="self" href="toki_de_carinho_pet_spa.html">
+	<img src="imgs/cao_estetica.jpg" width="20%"></a><br> Serviços de banho, tosa, <i>grooming</i> e <i>trimming</i>.</p>
+
+	</td>
+
+</tr>
+</table>
+
+<b><p style="font-size:100%; color:red">Faça seu cadastro e ganhe uma diária de hotel ou creche:</p></b>
+
+<!-- Para onde vão os dados do form?
+<form action="action.page.php" ??????
+<form action="action_page.php" method="get" (ou post)????-->
+<form>
+	Nome: 	<input type="text" name="firstname">
+	
+	Sobrenome: <input type="text" name="lastname">
+	<br>
+	<br>
+	E-mail:  <input type="email" name="contact1">
+
+	Celular:  <input type="tel" name="contact2">
+	<br>
+	<p><b><em>Preferência de contato:</em></b></p>
+	<input type="radio" id="contactchoice1" name="contact" value="email"><label for="contactchoice1">E-mail</label>
+	<input type="radio" id="contactchoice2" name="contact" value="phone"><label for="contactchoice2">WhatsApp</label>
+	<br>
+	<p><b><em>Seu(s) pet(s):</em></b></p>
+	<input type="checkbox" id="specie1" name="species" value="cachorro">Tenho cachorro
+	<input type="checkbox" id="specie2" name="specie2" value="gato">Tenho gato
+	<input type="button" value="Importante" onclick="msg()">
+</form>
+<script>
+	function msg() {
+		alert("O prêmio de realização de cadastro somente está disponível na versão 'hotel' no caso de felinos.");
+	}
+</script><br>
+	<input type="submit" name="Enviar">
+	<input type="reset" name="Redefinir">
+</form>
+<br>
+</div>
+
+<div style="background-color: #b0c4de; text-align: center; font-size: 15px; color: black; padding: 20px">
+
+<table align="center">
+	<tr>
+		<td width="20%" >
+			<a target="self" href="toki_carinho_empresa.html">
+			<img src="imgs/empresa.jpg" width="20%"></a>			
+		</td>
+		<td>
+			<img src="imgs/telefone.jpg" width="2%"><b> (27) 3333-3333</b>
+			<img src="imgs/whatsapp.jpg" width="2%"><b>(27) 9999-9999</b>
+			<img src="imgs/email.jpg" width="2%"> <b>contato@tokidecarinho.com.br</b>
+			<img src="imgs/facebook.png" width="2%"><b>https://www.facebook.com/tokidecarinho</b><br>
+			<br>
+			<img src="imgs/endereco.jpg" width="2%"><b>Rua Inexistente, 999 Praia da Costa Vila Velha - ES CEP: 29.999-999</b><br>
+		</td>
+	</tr>
+</table>
+
+	</div>
+
+</body>
+</html>

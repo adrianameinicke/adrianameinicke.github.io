@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto;
+  grid-gap: 10px;
+  padding: 10px;
+}
+.grid-container>div {
+  text-align: center;
+  padding:10px 0;
+  font-size: 25px;
+}
+</style>
+
+
+	<title>Calcululadora de Juros Compostos</title>
+</head>
+<body>
+
+	<div style="background-color: #b0c4de; text-align: center; padding: 10px font-size: 25px">
+		
+		<H1><font color="darkblue">Calculadora de Juros Compostos</font></H1>
+
+		<b>Digite o valor inicial:</b>
+
+		<input type="text" name="ValorInicial" required value="" id="ValorInicial" placeholder="Ex: 1000.00"  />
+
+		<b>Digite a taxa de juros mensal:</b>
+		
+		<input type="text" name="TaxaDeJuros" required="" id="TaxaDeJuros" placeholder="Ex: 10.00" />
+		
+		<b>Digite o prazo em meses:</b>
+		
+		<input type="text" name="Meses" required="" id="Meses" placeholder="Ex: 10" /><br>
+		<br>
+		<br>
+
+
+		 <button id="Calcular">Calcular</button>
+
+		<br><br>
+		
+		
+		<button value="Refresh Page" onclick="window.location.reload()">Limpar</button>
+
+		<br><br>
+
+
+		<h1 id="erro" style="color:red"></h1>
+
+	</div>
+
+	<div style="background-color: #b0c4de; text-align: center; padding: 10px font-size: 25px">
+
+		<h1><b>Resultado:</b></h1>
+
+	</div>
+
+
+
+	<div class="grid-container" style="grid-auto-flow: row;">
+	  <div class="item1"><b>Mês</b></div>
+	  <div class="item2"><b>Montante</b></div>
+	  <div class="item3"><b>Juros</b></div>
+	</div>
+
+	<div class="grid-container" style="grid-auto-flow: row;">
+		<div class="item1" id="ResultadoValor"></div>
+		<div class="item2" id="ResultadoMontante"></div>
+		<div class="item3" id="ResultadoJuros"></div>
+	</div>
+
+
+	<script type="text/javascript">
+
+
+	
+	document.getElementById("Calcular").addEventListener("click", calcular);
+	
+
+	function calcular(){
+	
+	var ValorInicial = document.getElementById("ValorInicial").value;
+	var TaxaDeJuros = document.getElementById("TaxaDeJuros").value;
+	var Meses = document.getElementById("Meses").value;
+	var Resultado = document.getElementById("Resultado");
+	var Montante = 0;
+	var Juros = 0;
+
+
+
+	if (ValorInicial == '' || TaxaDeJuros == '' || Meses == '') {
+		alert ("Os três campos devem estar preenchidos!");
+	}
+
+
+		else{
+
+			if (isNaN(ValorInicial) || isNaN(TaxaDeJuros) || isNaN(Meses)){
+
+				text = "ERRO! Você digitou um valor não numérico. Favor inserir apenas números nos 3 campos, usando 'PONTO' e não 'vírgula' como separador de digitos";
+
+			}
+
+
+			else{
+
+
+
+				var count = 1;
+				
+				while (count <= Meses){
+
+					Montante = ValorInicial * Math.pow(1 + (TaxaDeJuros/100),count);
+					var M = Montante.toFixed(2);
+
+					Juros = M - ValorInicial;
+					var J = Juros.toFixed(2);
+
+
+					ResultadoValor.innerHTML += "Mês " + count + "<br/>";
+
+					ResultadoMontante.innerHTML += "R$ " + M + "<br/>";
+
+					ResultadoJuros.innerHTML += "R$ " + J + "<br/>";
+
+					
+					count++;
+				}
+
+			}
+
+		
+	}
+
+	document.getElementById("erro").innerHTML = text;
+
+
+}	
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
